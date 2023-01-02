@@ -1,26 +1,3 @@
-#include "defs.h"
-
-#include DEF_MPERS_TYPE(utimbuf_t)
-
-#include <utime.h>
-
-typedef struct utimbuf utimbuf_t;
-
-#include MPERS_DEFS
-
-SYS_FUNC(utime)
-{
-	utimbuf_t u;
-
-	printpath(tcp, tcp->u_arg[0]);
-	tprints(", ");
-	if (!umove_or_printaddr(tcp, tcp->u_arg[1], &u)) {
-		tprintf("{actime=%lld", (long long) u.actime);
-		tprints_comment(sprinttime(u.actime));
-		tprintf(", modtime=%lld", (long long) u.modtime);
-		tprints_comment(sprinttime(u.modtime));
-		tprints("}");
-	}
-
-	return RVAL_DECODED;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0981066333a1ce8b571f65d9a436c9d3e6dc0d8c300b52a0b2af3193c3fb721a
+size 492

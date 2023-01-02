@@ -1,17 +1,3 @@
-#include "defs.h"
-#include "ptrace.h"
-#include "nsig.h"
-#include "regs.h"
-
-#if defined HAVE_ASM_SIGCONTEXT_H && !defined HAVE_STRUCT_SIGCONTEXT
-# include <asm/sigcontext.h>
-#endif
-
-#include "arch_sigreturn.c"
-
-SYS_FUNC(sigreturn)
-{
-	arch_sigreturn(tcp);
-
-	return RVAL_DECODED;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a4cd6f919787c219ace7cac7c4d8ad11f3efbbf16b1114b4bfd489a8527deb86
+size 279

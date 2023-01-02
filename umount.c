@@ -1,11 +1,3 @@
-#include "defs.h"
-#include "xlat/umount_flags.h"
-
-SYS_FUNC(umount2)
-{
-	printpath(tcp, tcp->u_arg[0]);
-	tprints(", ");
-	printflags(umount_flags, tcp->u_arg[1], "MNT_???");
-
-	return RVAL_DECODED;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b17ef5e32e2bf92d3fd3a71b7286f0bebf198a690b79a922acc2171317808fbf
+size 196

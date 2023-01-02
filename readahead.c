@@ -1,12 +1,3 @@
-#include "defs.h"
-
-SYS_FUNC(readahead)
-{
-	int argn;
-
-	printfd(tcp, tcp->u_arg[0]);
-	argn = printllval(tcp, ", %lld", 1);
-	tprintf(", %" PRI_klu, tcp->u_arg[argn]);
-
-	return RVAL_DECODED;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:895a7e0944ca117d81bfc75fa7cd3de41af33967d80ab8faf0af7ca6b56c466e
+size 189

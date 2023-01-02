@@ -1,13 +1,3 @@
-#include "defs.h"
-
-SYS_FUNC(getcpu)
-{
-	if (exiting(tcp)) {
-		printnum_int(tcp, tcp->u_arg[0], "%u");
-		tprints(", ");
-		printnum_int(tcp, tcp->u_arg[1], "%u");
-		tprints(", ");
-		printaddr(tcp->u_arg[2]);
-	}
-	return 0;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d633195a7cac8e2b01355cd3a09cde466cdd5a3b82d70ea38619444ab1080ccb
+size 221

@@ -1,15 +1,3 @@
-#ifndef STRACE_NSIG_H
-#define STRACE_NSIG_H
-
-#include <signal.h>
-
-#ifndef NSIG
-# warning NSIG is not defined, using 32
-# define NSIG  32
-#elif NSIG < 32
-# error NSIG < 32
-#endif
-
-#define NSIG_BYTES	(NSIG / 8)
-
-#endif /* !STRACE_NSIG_H */
+version https://git-lfs.github.com/spec/v1
+oid sha256:d26a083855180789fbd2306f42a0ee72dd68ec7bf0a678c05eb1eb52983eadd5
+size 238

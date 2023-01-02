@@ -1,30 +1,3 @@
-#include "defs.h"
-
-static void
-decode_renameat(struct tcb *tcp)
-{
-	print_dirfd(tcp, tcp->u_arg[0]);
-	printpath(tcp, tcp->u_arg[1]);
-	tprints(", ");
-	print_dirfd(tcp, tcp->u_arg[2]);
-	printpath(tcp, tcp->u_arg[3]);
-}
-
-SYS_FUNC(renameat)
-{
-	decode_renameat(tcp);
-
-	return RVAL_DECODED;
-}
-
-#include <linux/fs.h>
-#include "xlat/rename_flags.h"
-
-SYS_FUNC(renameat2)
-{
-	decode_renameat(tcp);
-	tprints(", ");
-	printflags(rename_flags, tcp->u_arg[4], "RENAME_??");
-
-	return RVAL_DECODED;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:89b4c8a4666cbd14bd765c446f257011deddca1ec957d1e0f53ef20c4933cca9
+size 482

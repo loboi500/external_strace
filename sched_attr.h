@@ -1,19 +1,3 @@
-#ifndef STRACE_SCHED_ATTR_H
-#define STRACE_SCHED_ATTR_H
-
-# include <stdint.h>
-
-struct sched_attr {
-	uint32_t size;
-	uint32_t sched_policy;
-	uint64_t sched_flags;
-	uint32_t sched_nice;
-	uint32_t sched_priority;
-	uint64_t sched_runtime;
-	uint64_t sched_deadline;
-	uint64_t sched_period;
-};
-
-# define SCHED_ATTR_MIN_SIZE	48
-
-#endif /* !STRACE_SCHED_ATTR_H */
+version https://git-lfs.github.com/spec/v1
+oid sha256:a26db84d628dc53a74f711e9a63faca55322c17d9d1cfb657d3966c69aebe1ec
+size 356

@@ -1,12 +1,3 @@
-#include "defs.h"
-
-SYS_FUNC(statfs64)
-{
-	if (entering(tcp)) {
-		printpath(tcp, tcp->u_arg[0]);
-		tprintf(", %" PRI_klu ", ", tcp->u_arg[1]);
-	} else {
-		print_struct_statfs64(tcp, tcp->u_arg[2], tcp->u_arg[1]);
-	}
-	return 0;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fdd4303ea84a9b666a1bf5e6c162c6c76e6d8ee7f3d0c921979dc6d3657f532e
+size 227

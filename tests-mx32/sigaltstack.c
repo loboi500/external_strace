@@ -1,15 +1,3 @@
-#include "tests.h"
-#include <signal.h>
-
-int
-main(void)
-{
-	stack_t ss = {
-		.ss_sp = (void *) 0xbaadf00d,
-		.ss_flags = SS_DISABLE,
-		.ss_size = 0xdeadbeef
-	};
-	if (sigaltstack(&ss, (stack_t *) 0))
-		perror_msg_and_skip("sigaltstack");
-	return 0;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6db0e653718e3a2edb958ee8f9a0468ca766dab84dabcf458d37a305b8cb1a42
+size 248

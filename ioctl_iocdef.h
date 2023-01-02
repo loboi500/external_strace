@@ -1,5 +1,3 @@
-#define _IOC_NONE 0U
-#define _IOC_READ 2U
-#define _IOC_WRITE 1U
-#define _IOC_SIZESHIFT ((0 +8)+8)
-#define _IOC_DIRSHIFT (((0 +8)+8)+14)
+version https://git-lfs.github.com/spec/v1
+oid sha256:050afd3b462662dad51bc15491961f0e1abc509c9de6ade407166f76da985dcc
+size 136

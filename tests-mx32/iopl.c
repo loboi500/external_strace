@@ -1,23 +1,3 @@
-#include "tests.h"
-#include <asm/unistd.h>
-
-#ifdef __NR_iopl
-
-# include <stdio.h>
-# include <unistd.h>
-
-int
-main(void)
-{
-	long rc = syscall(__NR_iopl, 4);
-	printf("iopl(4) = %ld %s (%m)\n", rc, errno2name());
-
-	puts("+++ exited with 0 +++");
-	return 0;
-}
-
-#else
-
-SKIP_MAIN_UNDEFINED("__NR_iopl")
-
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:db38812d520daa33f137a2a272c824ae4c40da6c923a35ddf75b4d8845387ba6
+size 304

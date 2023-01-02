@@ -1,20 +1,3 @@
-#ifndef STRACE_MSGHDR_H
-#define STRACE_MSGHDR_H
-
-/* For definitions of struct msghdr and struct mmsghdr. */
-# include <sys/socket.h>
-
-# ifndef HAVE_STRUCT_MMSGHDR
-struct mmsghdr {
-	struct msghdr msg_hdr;
-	unsigned msg_len;
-};
-# endif
-
-struct tcb;
-
-extern void
-print_struct_msghdr(struct tcb *, const struct msghdr *,
-		    const int *p_user_msg_namelen, kernel_ulong_t data_size);
-
-#endif /* !STRACE_MSGHDR_H */
+version https://git-lfs.github.com/spec/v1
+oid sha256:81423915922ee4a428b50cd48ecd3c00f7068cf123ba8a52f383100ced893e21
+size 412

@@ -1,28 +1,3 @@
-#include "defs.h"
-
-#ifdef HAVE_LINUX_FALLOC_H
-# include <linux/falloc.h>
-#endif
-
-#include "xlat/falloc_flags.h"
-
-SYS_FUNC(fallocate)
-{
-	int argn;
-
-	/* fd */
-	printfd(tcp, tcp->u_arg[0]);
-	tprints(", ");
-
-	/* mode */
-	printflags(falloc_flags, tcp->u_arg[1], "FALLOC_FL_???");
-	tprints(", ");
-
-	/* offset */
-	argn = printllval(tcp, "%lld, ", 2);
-
-	/* len */
-	printllval(tcp, "%lld", argn);
-
-	return RVAL_DECODED;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:33c73a007aca6807db7bf238ea904448500a43f0736abbff20a26634b84a60f9
+size 413

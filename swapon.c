@@ -1,23 +1,3 @@
-#include "defs.h"
-
-#include <sys/swap.h>
-
-#include "xlat/swap_flags.h"
-
-SYS_FUNC(swapon)
-{
-	unsigned int flags = tcp->u_arg[1];
-	unsigned int prio = flags & SWAP_FLAG_PRIO_MASK;
-	flags &= ~SWAP_FLAG_PRIO_MASK;
-
-	printpath(tcp, tcp->u_arg[0]);
-	tprints(", ");
-	if (flags) {
-		printflags(swap_flags, flags, "SWAP_FLAG_???");
-		tprintf("|%u", prio);
-	} else {
-		tprintf("%u", prio);
-	}
-
-	return RVAL_DECODED;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:aca1f1061f41fbb7070c97991b407bd64b7dd958c4569e4c24183e75ec5ef78a
+size 408
